@@ -1,0 +1,81 @@
+body{
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+.login-section{
+    background-color: #202A45;
+    width: 90%;
+    height: 100%;
+    border-radius: 37px;
+    border: solid 6px #C6BDBD;
+    padding-bottom: 2%;
+}
+.line{
+    border-right: solid 4px white;
+    height: auto;
+}
+
+.btn{
+    border-radius: 37px;
+    padding: auto;
+}
+.start-login{
+    height: 100%;
+}
+.logo{
+    width: 40px ;
+    height: 40px ;
+}
+.login-title{
+font-size: 4px;
+}
+.login-informations {
+    background-color: #1A2238;
+    border-radius: 37px;
+    border: solid 1px  #AC9F9F ;
+    width: 80%;
+    margin: 0 auto;
+    height: auto;
+    padding: 9%  10%;
+}
+
+
+input[type=text] {
+    background-color: #1A2238;
+    border: none;
+    border-bottom: 2px solid #AC9F9F;
+    border-top: 0px;
+    border-radius: 0px;
+    font-weight: bold;
+    outline: 0;
+    margin-bottom: 20px;
+    padding-left: 0px;
+}
+.form-control:focus {
+    border-color: inherit;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border-bottom: 2px solid #AC9F9F;
+    outline: 0;
+    background-color: #1A2238;
+    color: #ECF0F5;
+}
+
+input[type=password] {
+    background-color: #1A2238;
+    border: none;
+    border-bottom: 2px solid #AC9F9F;
+    border-top: 0px;
+    border-radius: 0px;
+    font-weight: bold;
+    outline: 0;
+    padding-left: 0px;
+    margin-bottom: 20px;
+    
+    
+}
+
+.form-group {
+    margin-bottom: 40px;
+    outline: 0px;
+}
