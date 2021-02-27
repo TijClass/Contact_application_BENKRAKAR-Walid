@@ -31,13 +31,17 @@
 
 
 
-
-        <div class="start-login row login-informations p-5 ">
-                <div class="col-lg-12">
-                    <table class="table">
+        <div class="start-login row col-lg-12 ">
+                <div class="ml-2 mt-5 col-lg-12">
+                    
+                    <div class="d-flex justify-content-between ml-5 mr-5 mb-3 "><h2>Contact list</h2>
+                    <button type="button" class="btn btn-info " data-mdb-ripple-color="dark">ADD</button>
+                </div>
+                    <div class="login-informations p-5">
+                    <table class="table ">
                         <thead>
                             <tr >
-                            <th scope="col">#</th>
+                            <th scope="col">ID</th>
                             <th scope="col">Firstname</th>
                             <th scope="col">Lastname</th>
                             <th scope="col">Email</th>
@@ -88,10 +92,10 @@
                                 <td>0682345678</td>
                                 <td>ME</td>
                                 <td>
-                                    <a class="btn btn-info" href="edit.php"> <i class="fa fa-edit"></i> </a>
+                                    <a class="btn btn-info" href="edit.php">edit<i class="fa fa-edit"></i> </a>
                                 </td>
                                 <td>
-                                    <a class="btn btn-danger" href="delete.php"> <i class="fa fa-close"></i> </a>
+                                    <a class="btn btn-danger" href="delete.php">delete <i class="fa fa-close"></i> </a>
                                 </td>
                             </tr>
         
@@ -99,6 +103,10 @@
                         
                         </tbody>
                     </table>
+                    
+                </div>
+                <button type="button" class="float-right ml-5 mt-4 btn  btn-light" data-mdb-ripple-color="dark">Logout</button>
+
                 </div>
             </div>
 

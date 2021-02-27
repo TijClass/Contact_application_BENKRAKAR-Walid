@@ -17,7 +17,9 @@ body{
 
 .btn{
     border-radius: 37px;
-    padding: auto;
+    padding-left: 2em;
+    padding-right: 2em;
+    
 }
 .start-login{
     height: 100%;
@@ -33,7 +35,7 @@ font-size: 4px;
     background-color: #1A2238;
     border-radius: 37px;
     border: solid 2px  #AC9F9F ;
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
     height: auto;
 }
