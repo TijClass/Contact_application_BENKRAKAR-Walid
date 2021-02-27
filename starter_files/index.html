@@ -1,23 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Bootstrap Example</title>
+  <title>Login page</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
+    
+<!--------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------start login page--------------------------------------------------------------------------------------->
+    <div class="container-fluid mt-5 login-section">
+        
 
-    <div class="container mt-5">
+
         <div class="row">
             <div class="col-lg-4 col-md-2"></div>
             <div class="col-lg-6 col-md-8 ">
-                <div class="col-lg-12 login-title">
-                    <img class="fix" src="./assets/img/browser.svg" alt="">
-                    ADMIN PANEL
+                <div class="col-lg-7 mt-5  text-center ">
+                   <h1 ><img class="logo" src="./assets/img/browser.svg" alt="">WELCOME TITLE</h1>
                 </div>
             </div>
+        </div>
+
+
+
+
+
+
+        <div class="start-login row login-informations p-5 ">
+                <div class="col-lg-12">
+                    <table class="table">
+                        <thead>
+                            <tr >
+                            <th scope="col">#</th>
+                            <th scope="col">Firstname</th>
+                            <th scope="col">Lastname</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">adress</th>
+                            <th scope="col">Phone</th>
+                            <th scope="col">groupe</th>
+                            <th scope="col">Edit</th>
+                            <th scope="col">Delete</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Walid</td>
+                                <td>Benkrakar</td>
+                                <td>benkrakarwalid44@gmail.com</td>
+                                <td>kandahar</td>
+                                <td>0682345678</td>
+                                <td>ME</td>
+                                <td>
+                                    <a class="btn btn-info" href="edit.php"> <i class="fa fa-edit"></i> </a>
+                                </td>
+                                <td>
+                                    <a class="btn btn-danger" href="delete.php"> <i class="fa fa-close"></i> </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Walid</td>
+                                <td>Benkrakar</td>
+                                <td>benkrakarwalid44@gmail.com</td>
+                                <td>kandahar</td>
+                                <td>0682345678</td>
+                                <td>ME</td>
+                                <td>
+                                    <a class="btn btn-info" href="edit.php"> <i class="fa fa-edit"></i> </a>
+                                </td>
+                                <td>
+                                    <a class="btn btn-danger" href="delete.php"> <i class="fa fa-close"></i> </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Walid</td>
+                                <td>Benkrakar</td>
+                                <td>benkrakarwalid44@gmail.com</td>
+                                <td>kandahar</td>
+                                <td>0682345678</td>
+                                <td>ME</td>
+                                <td>
+                                    <a class="btn btn-info" href="edit.php"> <i class="fa fa-edit"></i> </a>
+                                </td>
+                                <td>
+                                    <a class="btn btn-danger" href="delete.php"> <i class="fa fa-close"></i> </a>
+                                </td>
+                            </tr>
+        
+                            
+                        
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+
+
+
+
+
+
+    </div>
+    
+<!-------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------- end login page--------------------------------------------------------------------------------------->
 </body>
 </html>

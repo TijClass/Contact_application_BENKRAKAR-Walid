@@ -32,11 +32,10 @@ font-size: 4px;
 .login-informations {
     background-color: #1A2238;
     border-radius: 37px;
-    border: solid 1px  #AC9F9F ;
+    border: solid 2px  #AC9F9F ;
     width: 80%;
     margin: 0 auto;
     height: auto;
-    padding: 9%  10%;
 }
 
 
@@ -74,8 +73,22 @@ input[type=password] {
     
     
 }
+.table{
+    color:#AC9F9F ;
+}
 
 .form-group {
     margin-bottom: 40px;
     outline: 0px;
+}
+
+th{
+    border: none;
+    border-bottom: 1px solid #AC9F9F !important;
+    border-top: 0px !important;
+}
+
+td , tr{
+    border: none;
+    border-bottom: 1px solid #AC9F9F !important;
 }
