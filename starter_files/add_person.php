@@ -1,3 +1,26 @@
+<?php  include('db.php'); ?>
+
+<?php
+if(isset($_POST['submiit'])){
+    $Fname = $_POST['Fname'];
+    $Lname = $_POST['Lname'];
+    $email = $_POST['email'];
+    $adress = $_POST['adress'];
+    $phone = $_POST['phone'];
+    $group = $_POST['notes'];
+
+
+
+    $sql = "INSERT INTO `contact list` (`Firstname`,`Lastname`,`email`,`adress`,`phone`,`groupe`)
+    VALUES ('$Fname','$Lname','$email','$adress' ,'$phone', '$group')  ";
+
+mysqli_query($con,$sql);
+}
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,28 +52,28 @@
 
         <div class="text-center col-md-6 offset-md-3 login-informations p-5">
             <h4>ADD PERSON</h4>
+            <form  method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+
             <div>
-                <input type="text" class="form-control" placeholder="Firstname">
+                <input type="text" class="form-control" placeholder="Firstname" name="Fname">
             </div> <div>
-                <input type="text" class="form-control" placeholder="Lastname">
+                <input type="text" class="form-control" placeholder="Lastname" name="Lname">
             </div> <div>
-                <input type="text" class="form-control" placeholder="Email">
+                <input type="text" class="form-control" placeholder="Email" name="email">
             </div> <div>
-                <input type="text" class="form-control" placeholder="Adress">
+                <input type="text" class="form-control" placeholder="Adress" name="adress">
             </div> <div>
-                <input type="text" class="form-control" placeholder="Phone">
+                <input type="text" class="form-control" placeholder="Phone" name="phone">
             </div> <div>
-                <input type="text" class="form-control" placeholder="Notes">
+                <input type="text" class="form-control" placeholder="Notes" name=notes>
             </div>
-            <button type="button" class="btn btn-info " data-mdb-ripple-color="dark">ADD</button>
+            <button name="submiit" type="button" class="btn btn-info " data-mdb-ripple-color="dark">ADD</button>
+            </form>
 
         </div>
 
 
 
-
-        <div class="start-login row ">
-            <div class=" col-lg-1 col-md-1 mt-5"></div>
 
 <!-------------------------------------------------------------------------------------------------------------------------------------
 -------------------------------- end login page--------------------------------------------------------------------------------------->
