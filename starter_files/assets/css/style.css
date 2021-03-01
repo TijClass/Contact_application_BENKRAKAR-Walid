@@ -41,7 +41,7 @@ font-size: 4px;
 }
 
 
-input[type=text] {
+.form-control {
     background-color: #1A2238;
     border: none;
     border-bottom: 2px solid #AC9F9F;
@@ -62,19 +62,7 @@ input[type=text] {
     color: #ECF0F5;
 }
 
-input[type=password] {
-    background-color: #1A2238;
-    border: none;
-    border-bottom: 2px solid #AC9F9F;
-    border-top: 0px;
-    border-radius: 0px;
-    font-weight: bold;
-    outline: 0;
-    padding-left: 0px;
-    margin-bottom: 20px;
-    
-    
-}
+
 .table{
     color:#AC9F9F ;
 }
@@ -94,3 +82,4 @@ td , tr{
     border: none;
     border-bottom: 1px solid #AC9F9F !important;
 }
+

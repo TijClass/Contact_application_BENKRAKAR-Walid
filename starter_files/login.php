@@ -84,7 +84,9 @@
                         <input type="password" class="form-control" placeholder="Password">
                     </div>
                         <div class=" d-flex justify-content-between mt-5 " >
-                            <button type="button" class="btn btn-light" data-mdb-ripple-color="dark">Login</button>
+                            <a href="index.php">
+                                <button type="button" class="btn btn-light" data-mdb-ripple-color="dark">Login</button>
+                                </a>
                             <div>
                                 <input type="checkbox" name="remember_me" id="remember_me"  class="">
                                 <label class="" for="remember_me"> Remember Me!</label>
