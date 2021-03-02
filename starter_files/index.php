@@ -1,4 +1,6 @@
 <?php  include('db.php'); ?>
+<?php  include('validations.php'); ?>
+
 
 
 <?php
@@ -17,32 +19,34 @@ $result = mysqli_query($con,$sql);
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/css/style.css">
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
 </head>
 <body>
 
 
 
-<!-- Modal -->
+<!--------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------start modal-------------------------------------------------------------------------------------------->
 <div class="modal fade  " id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 <?php  include('db.php'); ?>
 
 <?php
 if(isset($_POST['submit'])){
-    $Fname = $_POST['Fname'];
-    $Lname = $_POST['Lname'];
-    $email = $_POST['email'];
-    $adress = $_POST['adress'];
-    $phone = $_POST['phone'];
-    $group = $_POST['notes'];
+    $Fname =  santString($_POST['Fname']);
+    $Lname = santString($_POST['Lname']);
+    $email = santEmail($_POST['email']);
+    $adress = santString($_POST['adress']);
+    $phone = santString($_POST['phone']);
+    $group = santString($_POST['notes']);
 
 
 
     $sql = "INSERT INTO `contact list` (`Firstname`,`Lastname`,`email`,`adress`,`phone`,`groupe`)
     VALUES ('$Fname','$Lname','$email','$adress' ,'$phone', '$group')  ";
 
-mysqli_query($con,$sql);
+    if(mysqli_query($con, $sql)){
+        header('Location: index.php');
+    
 }
 
 ?>
@@ -50,8 +54,6 @@ mysqli_query($con,$sql);
     <div class="modal-content login-informations ">
 
       <div class="modal-body ">
-
-   
             <button type="button" class="close" aria-label="Close" data-dismiss="modal">
                     <span style="color:white;" aria-hidden="true">&times;</span>
                 </button>
@@ -105,17 +107,21 @@ mysqli_query($con,$sql);
     </div>
   </div>
 </div>
-
-    
 <!--------------------------------------------------------------------------------------------------------------------------------------
---------------------------------start login page--------------------------------------------------------------------------------------->
+--------------------------------end modal----------------------------------------------------------------------------------------------->
+    
+
+
+
+<!--------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------start informations page-------------------------------------------------------------------------------->
     <div class="container-fluid mt-5 login-section">
         
 
 
         <div class="row">
             <div class="col-lg-4 col-md-2"></div>
-            <div class="col-lg-6 col-md-8 ">
+            <div class="col-lg-6 col-md-5 ">
                 <div class="col-lg-7 mt-5  text-center ">
                    <h1 ><img class="logo" src="./assets/img/browser.svg" alt="">WELCOME TITLE</h1>
                 </div>
@@ -189,6 +195,6 @@ mysqli_query($con,$sql);
     </div>
     
 <!-------------------------------------------------------------------------------------------------------------------------------------
--------------------------------- end login page--------------------------------------------------------------------------------------->
+-------------------------------- end informations page-------------------------------------------------------------------------------->
 </body>
 </html>
