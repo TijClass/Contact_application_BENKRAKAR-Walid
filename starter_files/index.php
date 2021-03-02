@@ -3,6 +3,7 @@
 
 
 
+
 <?php
 $sql = "SELECT * FROM `contact list`";
 $result = mysqli_query($con,$sql);
@@ -46,10 +47,13 @@ if(isset($_POST['submit'])){
 
     if(mysqli_query($con, $sql)){
         header('Location: index.php');
-    
+    } else{
+        echo "Err";
+    }
 }
-
 ?>
+
+    }?>
   <div class="modal-dialog" role="document">
     <div class="modal-content login-informations ">
 
@@ -62,7 +66,7 @@ if(isset($_POST['submit'])){
 
                     <div class="form-group">
                         <label for="recipient-name" class="col-form-label">First name:</label>
-                        <input type="text" name="Fname" class="form-control" id="recipient-name" required>
+                        <input type="text"  name="Fname" class="form-control" id="recipient-name" required>
                     </div>
                     <div class="form-group">
                         <label for="recipient-name" class="col-form-label">Last name:</label>
@@ -165,7 +169,7 @@ if(isset($_POST['submit'])){
                         <td><?php echo $row['phone']; ?></td>
                         <td><?php echo $row['groupe']; ?></td>
                         <td>
-                            <a class="btn btn-info" href="edit.php?id=<?php echo $row['ID']; ?>"> <i class="fa fa-edit"></i> </a>
+                            <a class="btn btn-info" name="edit" href="index.php?id=<?php echo $row['ID'];  ?>" data-mdb-ripple-color="dark" data-toggle="modal" data-target="#exampleModal"  > <i class="fa fa-edit"></i> </a>
                         </td>
                         <td>
                             <a class="btn btn-danger" href="delete.php?id=<?php echo $row['user_id']; ?>"> <i class="fa fa-close"></i> </a>
