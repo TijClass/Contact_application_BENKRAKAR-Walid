@@ -1,37 +1,18 @@
-<?php  include('db.php'); ?>
-<?php  include('validations.php'); ?>
-
-
-
-
 <?php
-$sql = "SELECT * FROM `contact list`";
-$result = mysqli_query($con,$sql);
+  include('db.php'); 
+  include('validations.php');
+  session_start(); 
+if ( !$_SESSION['login']){
+    header('Location: login.php');
+    die;
+}
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>Login page</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
-</head>
-<body>
-
-
-
-<!--------------------------------------------------------------------------------------------------------------------------------------
---------------------------------start modal-------------------------------------------------------------------------------------------->
-<div class="modal fade  " id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-<?php  include('db.php'); ?>
 
 <?php
+
+$sql = "SELECT * FROM `contact list`"; 
+$result = mysqli_query($con,$sql);
 if(isset($_POST['submit'])){
     $Fname =  santString($_POST['Fname']);
     $Lname = santString($_POST['Lname']);
@@ -48,12 +29,39 @@ if(isset($_POST['submit'])){
     if(mysqli_query($con, $sql)){
         header('Location: index.php');
     } else{
-        echo "Err";
+        echo "err";
     }
 }
-?>
+  
+  ?>
 
-    }?>
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Login page</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<!--------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------start modal-------------------------------------------------------------------------------------------->
+<div class="modal fade  " id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+
+    
   <div class="modal-dialog" role="document">
     <div class="modal-content login-informations ">
 
